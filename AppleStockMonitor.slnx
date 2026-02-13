@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="applestockmonitor.client/applestockmonitor.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="AppleStockMonitor.Server/AppleStockMonitor.Server.csproj" />
+</Solution>

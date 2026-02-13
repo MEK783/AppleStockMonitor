@@ -1,0 +1,12 @@
+@AppleStockMonitor.Server_HostAddress = http://localhost:5002
+
+GET {{AppleStockMonitor.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+GET {{AppleStockMonitor.Server_HostAddress}}/intervals/
+Accept: application/json
+
+POST {{AppleStockMonitor.Server_HostAddress}}/distribution/
+Accept: application/json
+
+###
