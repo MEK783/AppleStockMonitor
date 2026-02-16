@@ -4,8 +4,11 @@ import './App.css';
 function App() {
     const [intervals, setIntervals] = useState([]);
     useEffect(() => {
-        setIntervals(getIntervals());
-    }, []);
+        (async () => {
+            const intervalis = await getIntervals();
+            setIntervals(intervalis);
+        })();
+    }, [intervals]);
 
     return (
         <div>
@@ -25,9 +28,9 @@ function App() {
     );
 
     async function getIntervals() {
-        const response = await fetch('stockdata');
+        const response = await fetch('intervals');
         if (response.ok) {
-            return JSON.parse(response.json());
+            return await response.json();
         }
 
         return [];

@@ -52,11 +52,11 @@ export default defineConfig({
                 secure: false
             },
             '^/distribution': {
-                target,
+                target: target + "/StockMonitor",
                 secure: false
             },
             '^/intervals': {
-                target,
+                target: target + "/StockMonitor",
                 secure: false
             }
         },

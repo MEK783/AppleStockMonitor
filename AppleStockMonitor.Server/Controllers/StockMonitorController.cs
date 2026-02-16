@@ -127,7 +127,7 @@ namespace AppleStockMonitor.Server.Controllers
         public ActionResult GetIntervals()
         {
             // Return the list of intervals as a JSON response
-            var intervals = Enum.GetValues(typeof(Interval)).Cast<Interval>().ToList();
+            var intervals = Enum.GetNames(typeof(Interval)).ToList();
             return Ok(intervals);
         }
 
